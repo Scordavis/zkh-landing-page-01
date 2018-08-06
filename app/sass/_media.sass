@@ -60,6 +60,12 @@
 		&__background-image
 			display: none
 
+	.slide
+		&__text
+			&--bg-shaped
+				top: 0
+				left: -90px
+
 	.footer-page
 		&__text
 			&--responsive
@@ -84,8 +90,19 @@
 			width: 100%
 	.slide
 		&__text-heading
-			height: 14vw
 			line-height: 1.4
+
+		&__bg
+			&--darken-opacity
+				opacity: .6
+
+	// .news
+	.news
+		&__img
+			height: 200px
+		&__card-wrapper
+
+
 
 // ≥576px
 @media (max-width: 575.98px)
@@ -106,8 +123,9 @@
 			width: 100%
 	.slide
 		&__text-heading
-			height: 17vw
 			line-height: 1.2
+
+
 
 
 
