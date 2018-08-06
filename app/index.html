@@ -99,34 +99,36 @@
 	<div class="container-fluid position-absolute">
 		<!-- header-page -->
 		<header class="container-fluid mb-4 header-page">
-			<div class="row h-100 align-items-center px-3 py-2">
+			<div class="row h-100 no-gutters align-items-center px-3 py-2">
 				<!-- header-page__item company-logo-->
 				<div class="col-2 d-flex h-100 py-2 align-items-center logo-company theme__bg--transparent">
-					<img src="img/logo-company.png" class="img-fluid h-100 logo-company__self" alt="">
+					<img src="img/logo-company.png" class="img-fluid logo-company__self" alt="">
 				</div>
 				<!-- header-page__item location-->
-				<div class="col-2 header-page__item text-center">
-					<img src="img/icons/ico-map-marker.png" alt="" class="pl-2 mr-1 footer-page__icon theme__text--accent">
-					<p class="d-inline header-page__text theme__text--light">Стебник.ua</p>
+				<div class="col-3 header-page__item text-center">
+					<img src="img/icons/ico-map-marker.png" alt="" class="pl-2 mb-2 mr-1 footer-page__icon theme__text--accent">
+					<p class="d-inline header-page__text theme__text--light">м.Сватове.ua</p>
 				</div>
-				<!-- header-page__item phone -->
-				<div class="col-2 header-page__item text-center">
-					<img src="img/icons/ico-mail.png" alt="" class="pl-2 mr-1 footer-page__icon theme__text--accent">
-					<p class="d-inline header-page__text header-page__text--bigger theme__text--light">032-44-22-80</p>
-				</div>
-				<!-- header-page__item emergency -->
-				<div class="col-2 header-page__item text-center">
-					<!-- <i class="mr-1 fa fa-exclamation-triangle header-page__icon theme__text--accent"></i> -->
-					<!-- <p class="d-inline mr-2 header-page__text header-page__text--bigger theme__text--light">032-44-31-08</p> -->
-					<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--accent">аварійна служба</a></p>
+				<div class="col-4">
+					<div class="row no-gutters">
+						<!-- header-page__item phone -->
+						<div class="col-12 col-xl-6 header-page__item text-center">
+							<img src="img/icons/ico-mail.png" alt="" class="pl-2 mb-2 mr-1 footer-page__icon theme__text--accent">
+							<p class="d-inline header-page__text header-page__text--bigger theme__text--light">032-44-22-80</p>
+						</div>
+						<!-- header-page__item emergency -->
+						<div class="col-12 col-xl-6 header-page__item text-center">
+							<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--accent">аварійна служба</a></p>
+						</div>
+					</div>
 				</div>
 				<!-- header-page__item godfather logo -->
-				<div class="col-4 d-none d-sm-block text-right header-page__item text-center">
+				<div class="col-3 d-none d-sm-block text-right header-page__item text-center">
 					<div class="row no-gutters align-items-center">
-						<div class="offset-0 offset-xl-1 col-5 col-sm-5 col-md-1 col-lg-3 col-xl-4 pr-2 text-right">
-							<img src="img/logo-transparent.svg" class="header-page__item--logo" alt="">
+						<div class="col-4 pr-2 text-right">
+							<img src="img/logo-transparent.svg" class="w-75 header-page__item--logo" alt="">
 						</div>
-						<div class="col-7 col-sm-6 col-lg-7 col-xl-6 pl-md-0 pl-4">
+						<div class="col-8 pl-md-0 pl-4">
 							<p class="mb-0 text-left header-page__text header-page__text--logo-title theme__text--light">фру - жкг<span class="mb-0 d-block header-page__text header-page__text--logo-description">інвестиції в працю</span></p>
 						</div>
 					</div>
@@ -136,7 +138,7 @@
 		<!-- .navbar -->
 		<div class="container navbar navbar--wide theme__bg--accent">
 			<!-- .navbar__decor, prevent ie bug -->
-			<span class="h-100 navbar__decor theme__bg--accent"></span>
+			<span class="h-100 d-none d-xl-block navbar__decor theme__bg--accent"></span>
 			<!-- site nav buttons desctop-->
 			<div class="row no-gutters w-100 h-100 align-items-center">
 				<!-- nav__item dropdown list-->
@@ -191,7 +193,7 @@
 				</div>
 			</div>
 			<!-- .navbar__decor, prevent ie bug -->
-			<span class="h-100 navbar__decor theme__bg--accent"></span>
+			<span class="h-100 d-none d-xl-block navbar__decor theme__bg--accent"></span>
 			<!-- hamburger button -->
 			<div class="d-flex col-3 col-sm-4 col-md-4 d-lg-none h-100 align-items-center justify-content-end">
 				<button class="hamburger theme__rad--accent"  id="hamburger">
@@ -272,12 +274,6 @@
 				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/slider-shapes.png);">
 				</div>
 				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<div class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay">
-					</div>
-					<!-- visible overlay  on handler -->
-					<div class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay">
-					</div>
 					<div class="container h-100 pt-5">
 						<div class="row h-100">
 							<div class="offset-lg-4 col-lg-7 h-100 pl-0 py-4 slide__text text-center" >
@@ -304,12 +300,6 @@
 				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/slider-shapes.png);">
 				</div>
 				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<div class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay">
-					</div>
-					<!-- visible overlay  on handler -->
-					<div class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay">
-					</div>
 					<div class="container h-100 pt-5">
 						<div class="row h-100">
 							<div class="offset-lg-4 col-lg-7 h-100 pl-0 py-4 slide__text text-center" >
@@ -336,12 +326,6 @@
 				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/slider-shapes.png);">
 				</div>
 				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<div class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay">
-					</div>
-					<!-- visible overlay  on handler -->
-					<div class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay">
-					</div>
 					<div class="container h-100 pt-5">
 						<div class="row h-100">
 							<div class="offset-lg-4 col-lg-7 h-100 pl-0 py-4 slide__text text-center" >
@@ -363,16 +347,16 @@
 		<h2 class="d-block mb-5 text-left block-heading block-heading--aside-lines theme__text--dark"><span>Новини</span></h2>
 		<div class="row pt-4">
 			<!-- news__card -->
-			<div class="col-6 px-2 mb-5">
+			<div class="col-12 col-xl-6 px-2 mb-5">
 				<a href="#" class="w-100 mb-5 reset-link news__card">
 					<div class="row no-gutters p-3 news__card-wrapper">
 						<!-- news card image -->
-						<div class="col-6">
+						<div class="col-xl-6 col-4">
 							<div class="position-absolute news__img-decorate"></div>
 							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
 						</div>
 						<!-- news card content -->
-						<div class="col-6">
+						<div class="col-xl-6 col-8">
 							<div class="row mt-1 mb-3 px-3 no-gutters">
 								<!-- news attributes -->
 								<div class="col news__attribute">
@@ -389,42 +373,16 @@
 				</a>
 			</div>
 			<!-- news__card -->
-			<div class="col-6 px-2 mb-5">
+			<div class="col-12 col-xl-6 px-2 mb-5">
 				<a href="#" class="w-100 mb-5 reset-link news__card">
 					<div class="row no-gutters p-3 news__card-wrapper">
 						<!-- news card image -->
-						<div class="col">
+						<div class="col-xl-6 col-4">
 							<div class="position-absolute news__img-decorate"></div>
 							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
 						</div>
 						<!-- news card content -->
-						<div class="col">
-							<div class="row mt-1 mb-3 px-3 no-gutters">
-								<!-- news attributes -->
-								<div class="col news__attribute">
-									<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
-								</div>
-								<div class="col news__attribute">
-									<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
-								</div>
-							</div>
-							<p class="mt-1 mb-1 px-3 news__title news__title theme__text--accent">Заголовокновиниsdfsdfsfdsf</p>
-							<p class="mb-0 px-3 news__description news__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<!-- news__card -->
-			<div class="col-6 px-2 mb-5">
-				<a href="#" class="w-100 mb-5 reset-link news__card">
-					<div class="row no-gutters p-3 news__card-wrapper">
-						<!-- news card image -->
-						<div class="col-6">
-							<div class="position-absolute news__img-decorate"></div>
-							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
-						</div>
-						<!-- news card content -->
-						<div class="col-6">
+						<div class="col-xl-6 col-8">
 							<div class="row mt-1 mb-3 px-3 no-gutters">
 								<!-- news attributes -->
 								<div class="col news__attribute">
@@ -441,16 +399,16 @@
 				</a>
 			</div>
 			<!-- news__card -->
-			<div class="col-6 px-2 mb-5">
+			<div class="col-12 col-xl-6 px-2 mb-5">
 				<a href="#" class="w-100 mb-5 reset-link news__card">
 					<div class="row no-gutters p-3 news__card-wrapper">
 						<!-- news card image -->
-						<div class="col">
+						<div class="col-xl-6 col-4">
 							<div class="position-absolute news__img-decorate"></div>
 							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
 						</div>
 						<!-- news card content -->
-						<div class="col">
+						<div class="col-xl-6 col-8">
 							<div class="row mt-1 mb-3 px-3 no-gutters">
 								<!-- news attributes -->
 								<div class="col news__attribute">
@@ -460,8 +418,34 @@
 									<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
 								</div>
 							</div>
-							<p class="mt-1 mb-1 px-3 news__title news__title theme__text--accent">Заголовокновиниsdfsdfsfdsf</p>
-							<p class="mb-0 px-3 news__description news__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+							<p class="mt-1 mb-1 px-3 news__title news__title theme__text--accent">Заголовок новини</p>
+							<p class="mb-0 px-3 news__description news__description">Значимість цих проблем настільки очевидна, що зміцнення та розвиток структури в значній мірі обумовлює створення нових пропозицій.</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- news__card -->
+			<div class="col-12 col-xl-6 px-2 mb-5">
+				<a href="#" class="w-100 mb-5 reset-link news__card">
+					<div class="row no-gutters p-3 news__card-wrapper">
+						<!-- news card image -->
+						<div class="col-xl-6 col-4">
+							<div class="position-absolute news__img-decorate"></div>
+							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
+						</div>
+						<!-- news card content -->
+						<div class="col-xl-6 col-8">
+							<div class="row mt-1 mb-3 px-3 no-gutters">
+								<!-- news attributes -->
+								<div class="col news__attribute">
+									<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+								</div>
+								<div class="col news__attribute">
+									<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+								</div>
+							</div>
+							<p class="mt-1 mb-1 px-3 news__title news__title theme__text--accent">Заголовок новини</p>
+							<p class="mb-0 px-3 news__description news__description">Значимість цих проблем настільки очевидна, що зміцнення та розвиток структури в значній мірі обумовлює створення нових пропозицій.</p>
 						</div>
 					</div>
 				</a>
