@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
-	<title>Приклад 2</title>
+	<title>Приклад 3</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,163 +20,169 @@
 	<link rel="stylesheet" href="css/modal.css">
 	<link rel="stylesheet" href="css/main.css">
 	<style>
-		/*theme customize*/
-		/*fancybox color layout*/
-		.fancybox-content {
-			background-color: unset;
-		}
-		/*slider*/
-		/*pagination*/
-		.slick-dots li button:before {
-			background-color: #ffffff;
-		}
-		.slick-dots li.slick-active button:before {
-			box-shadow: 0px 0px 0px 4px #daa520;
-		}
 
-		/*.theme-colors*/
-		.theme__text--accent {
-			color: #edb636;
-		}
-		.theme__text--danger {
-			color: #f33924;
-		}
-		.theme__text--normal {
-			color: #cecece;
-		}
-		.theme__text--dark {
-			color: #555555;
-		}
-		.theme__text--light {
-			color: #ffffff;
-		}
-		.theme__bg--accent {
-			background-color: #edb636;
-		}
-		.theme__bg--danger {
-			background-color: #f33924;
-		}
-		.theme__bg--normal {
-			background-color: #cecece;
-		}
-		.theme__bg--dark {
-			background-color: #555555;
-		}
-		.theme__bg--light {
-			background-color: #ffffff;
-		}
-		.theme__rad--accent {
-			border-color: #edb636;
-		}
-		.theme__rad--danger {
-			border-color: #f33924;
-		}
-		.theme__rad--normal {
-			border-color: #cecece;
-		}
-		.theme__rad--dark {
-			border-color: #555555;
-		}
-		.theme__rad--light {
-			border-color: #ffffff;
-		}
-	</style>
+	body{
+		background-color: #555555
+	}
+	/*theme customize*/
+	/*fancybox color layout*/
+	.fancybox-content {
+		background-color: unset;
+	}
+	/*slider*/
+	/*pagination*/
+	.slick-dots li button:before {
+		background-color: #ffffff;
+	}
+	.slick-dots li.slick-active button:before {
+		box-shadow: 0px 0px 0px 4px #daa520;
+	}
+
+	/*.theme-colors*/
+	.theme__text--accent {
+		color: #edb636;
+	}
+	.theme__text--danger {
+		color: #f33924;
+	}
+	.theme__text--normal {
+		color: #cecece;
+	}
+	.theme__text--dark {
+		color: #555555;
+	}
+	.theme__text--light {
+		color: #ffffff;
+	}
+	.theme__bg--accent {
+		background-color: #edb636;
+	}
+	.theme__bg--transparent {
+		background-color: transparent;
+	}
+	.theme__bg--danger {
+		background-color: #f33924;
+	}
+	.theme__bg--normal {
+		background-color: #cecece;
+	}
+	.theme__bg--dark {
+		background-color: #555555;
+	}
+	.theme__bg--light {
+		background-color: #ffffff;
+	}
+	.theme__rad--accent {
+		border-color: #edb636;
+	}
+	.theme__rad--danger {
+		border-color: #f33924;
+	}
+	.theme__rad--normal {
+		border-color: #cecece;
+	}
+	.theme__rad--dark {
+		border-color: #555555;
+	}
+	.theme__rad--light {
+		border-color: #ffffff;
+	}
+</style>
 </head>
 <body>
-	<!-- header-page -->
-	<header class="container-fluid header-page theme__bg--dark" style="background-image: url(img/bg-abstract.png);">
-		<div class="row h-100 align-items-center px-3 py-2">
-			<!-- header-page__item location-->
-			<div class="col-lg col-md-4 col-sm-12 header-page__item text-center text-md-left">
-				<i class="mr-1 fa fa-map-marker header-page__icon theme__text--accent"></i>
-				<p class="d-inline header-page__text theme__text--light">Стебник.ua</p>
-			</div>
-			<!-- header-page__item phone -->
-			<div class="col-lg col-md-4 header-page__item text-center text-md-left">
-				<i class="mr-1 fa fa-phone header-page__icon theme__text--accent"></i>
-				<p class="d-inline header-page__text header-page__text--bigger theme__text--light">032-44-22-80</p>
-			</div>
-			<!-- header-page__item emergency -->
-			<div class="col-xl-4 col-lg-3 col-md-4 header-page__item text-center text-md-left">
-				<i class="mr-1 fa fa-exclamation-triangle header-page__icon theme__text--danger"></i>
-				<p class="d-inline mr-2 header-page__text header-page__text--bigger theme__text--light">032-44-31-08</p>
-				<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--danger">аварійна служба</a></p>
-			</div>
-			<!-- header-page__item godfather logo -->
-			<div class="d-none d-sm-block col-lg-3 col-md-12 text-right header-page__item text-center text-md-left">
-				<div class="row no-gutters align-items-center">
-					<div class="offset-0 offset-xl-1 col-5 col-sm-5 col-md-1 col-lg-3 col-xl-4 pr-2 text-right">
-						<img src="img/logo-transparent.svg" class="header-page__item--logo" alt="">
-					</div>
-					<div class="col-7 col-sm-6 col-lg-7 col-xl-6 pl-md-0 pl-4">
-						<p class="mb-0 text-left header-page__text header-page__text--logo-title theme__text--light">фру - жкг<span class="mb-0 d-block header-page__text header-page__text--logo-description">інвестиції в працю</span></p>
+	<!-- gradient-mask -->
+	<div class="position-absolute w-100 header-page__mask"></div>
+	<!-- .absolute-wrapper -->
+	<div class="container-fluid position-absolute">
+		<!-- header-page -->
+		<header class="container-fluid header-page">
+			<div class="row h-100 align-items-center px-3 py-2">
+				<!-- header-page__item company-logo-->
+				<div class="d-flex h-100 py-2 align-items-center logo-company theme__bg--transparent">
+					<img src="img/logo-company.png" class="img-fluid h-100 logo-company__self" alt="">
+				</div>
+				<!-- header-page__item location-->
+				<div class="col-lg col-md-4 col-sm-12 header-page__item text-center">
+					<img src="img/icons/ico-map-marker.png" alt="" class="pl-2 mr-1 footer-page__icon theme__text--accent">
+					<p class="d-inline header-page__text theme__text--light">Стебник.ua</p>
+				</div>
+				<!-- header-page__item phone -->
+				<div class="col-lg col-md-4 header-page__item text-center">
+					<img src="img/icons/ico-mail.png" alt="" class="pl-2 mr-1 footer-page__icon theme__text--accent">
+					<p class="d-inline header-page__text header-page__text--bigger theme__text--light">032-44-22-80</p>
+				</div>
+				<!-- header-page__item emergency -->
+				<div class="col-xl-4 col-lg-3 col-md-4 header-page__item text-center">
+					<i class="mr-1 fa fa-exclamation-triangle header-page__icon theme__text--accent"></i>
+					<p class="d-inline mr-2 header-page__text header-page__text--bigger theme__text--light">032-44-31-08</p>
+					<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--accent">аварійна служба</a></p>
+				</div>
+				<!-- header-page__item godfather logo -->
+				<div class="d-none d-sm-block col-lg-3 col-md-12 text-right header-page__item text-center">
+					<div class="row no-gutters align-items-center">
+						<div class="offset-0 offset-xl-1 col-5 col-sm-5 col-md-1 col-lg-3 col-xl-4 pr-2 text-right">
+							<img src="img/logo-transparent.svg" class="header-page__item--logo" alt="">
+						</div>
+						<div class="col-7 col-sm-6 col-lg-7 col-xl-6 pl-md-0 pl-4">
+							<p class="mb-0 text-left header-page__text header-page__text--logo-title theme__text--light">фру - жкг<span class="mb-0 d-block header-page__text header-page__text--logo-description">інвестиції в працю</span></p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<!-- .navbar -->
-	<div class="row py-0 navbar">
-		<div class="position-absolute w-100 h-100">
-			<div class="offset-xl-4 offset-lg-3 h-100 navbar__background-image" style="background-image: url(img/bg/uzor1.png);"></div>
-		</div>
-		<div class="container-fluid navbar__container h-100">
-			<div class="d-flex col-9 col-sm-6 col-md-7 col-lg-3 h-100 py-2 align-items-center logo-company">
-				<img src="img/logo-company.png" class="img-fluid h-100 logo-company__self" alt="">
-			</div>
+		</header>
+		<!-- .navbar -->
+		<div class="container navbar theme__bg--accent">
 			<!-- site nav buttons desctop-->
-			<div class="col-lg-8 h-100 d-none d-lg-block col-7 col-xl-7 col-lg-6 col-md-4 nav__link-wrapper">
-				<div class="row no-gutters h-100 align-items-center">
-					<!-- nav__item dropdown list-->
-					<div class="col text-lg-center text-md-right nav__item">
-						<div class="nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">про нас</a>
-							<div class="nav-dropdown__content theme__bg--light">
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Керівництво</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Контакти</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Структура підприємства</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Телефонний довідник</a>
-							</div>
+			<div class="row no-gutters w-100 h-100 align-items-center">
+				<!-- nav__item dropdown list-->
+				<div class="col text-lg-center text-md-right nav__item">
+					<div class="nav-dropdown js-dropdown">
+						<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">про нас</a>
+						<div class="nav-dropdown__content theme__bg--light">
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Керівництво</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Контакти</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Структура підприємства</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Телефонний довідник</a>
 						</div>
 					</div>
-					<!-- nav__item dropdown list-->
-					<div class="col text-lg-center text-md-right nav__item">
-						<div class="nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">тарифи</a>
-							<div class="nav-dropdown__content theme__bg--light">
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Нормативні акти</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Структура тарифу</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оголошення про перегляд</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Діючі тарифи</a>
-							</div>
+				</div>
+				<!-- nav__item dropdown list-->
+				<div class="col text-lg-center text-md-right nav__item">
+					<div class="nav-dropdown js-dropdown">
+						<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">тарифи</a>
+						<div class="nav-dropdown__content theme__bg--light">
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Нормативні акти</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Структура тарифу</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оголошення про перегляд</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Діючі тарифи</a>
 						</div>
 					</div>
-					<!-- nav__item dropdown list-->
-					<div class="col text-lg-center text-md-right nav__item">
-						<div class="reset-link nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">споживачам</a>
-							<div class="nav-dropdown__content theme__bg--light">
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оплата послуг</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Пільги</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Корисна інформація</a>
-							</div>
+				</div>
+				<!-- nav__item dropdown list-->
+				<div class="col text-lg-center text-md-right nav__item">
+					<div class="reset-link nav-dropdown js-dropdown">
+						<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">споживачам</a>
+						<div class="nav-dropdown__content theme__bg--light">
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оплата послуг</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Пільги</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Корисна інформація</a>
 						</div>
 					</div>
-					<!-- nav__item dropdown list-->
-					<div class="col text-lg-center text-md-right nav__item">
-						<div class="reset-link nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">офіційне</a>
-							<div class="nav-dropdown__content theme__bg--light">
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оголошення</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Державні закупівлі</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Звітність</a>
-							</div>
+				</div>
+				<!-- nav__item dropdown list-->
+				<div class="col text-lg-center text-md-right nav__item">
+					<div class="reset-link nav-dropdown js-dropdown">
+						<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">офіційне</a>
+						<div class="nav-dropdown__content theme__bg--light">
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оголошення</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Державні закупівлі</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Звітність</a>
 						</div>
 					</div>
-					<!-- nav__item -->
-					<div class="col text-lg-center text-md-right nav__item">
-						<a href="#" class="d-md-block reset-link nav__link nav-dropdown__button theme__text--dark">Кабінет</a>
-					</div>
+				</div>
+				<!-- nav__item -->
+				<div class="col text-lg-center text-md-right nav__item">
+					<a href="#" class="d-md-block reset-link nav__link nav-dropdown__button theme__text--dark">Кабінет</a>
 				</div>
 			</div>
 			<!-- hamburger button -->
@@ -248,68 +254,23 @@
 	<div class="w-100 slider">
 		<div class="h-100 mb-0 slider__wrapper" id="topSlider">
 			<!-- slide-->
-			<div class="position-relative slide">
-				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/snow.jpg);">
+			<div class="position-relative slide slide--full">
+				<!-- image -->
+				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/slide-1.jpg);">
+				</div>
+				<!-- darken-opacity -->
+				<div class="slide__bg slide__bg--darken-opacity h-100 w-100 position-absolute" style="background-color: #000000">
+				</div>
+				<!-- slider shapes -->
+				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/slider-shapes.png);">
 				</div>
 				<div class="slide__content">
 					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
-					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
-								<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 </span>осіб</p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
-							</div>
-						</div>
+					<div class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay">
 					</div>
-				</div>
-			</div>
-			<!-- slide-->
-			<div class="position-relative slide">
-				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/water.jpg);">
-				</div>
-				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
 					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
-								<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 </span>осіб</p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
-							</div>
-						</div>
+					<div class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay">
 					</div>
-				</div>
-			</div>
-			<!-- slide-->
-			<div class="position-relative slide">
-				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/snow.jpg);">
-				</div>
-				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
-					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
 					<div class="container-fluid h-100">
 						<div class="row h-100">
 							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
@@ -728,7 +689,7 @@
 		$('#topSlider').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			autoplay: true,
+			autoplay: false,
 			autoplaySpeed: 10000,
 			dots: true,
 			arrows: true,

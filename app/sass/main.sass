@@ -158,7 +158,13 @@ button
 	color: white
 	font-size: 18px
 	z-index: 8
-	&__wrapper
+
+	&__mask
+		height: 230px
+		background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+		z-index: 5
+
 	&__item
 		&--logo
 			max-width: 60px
@@ -311,16 +317,7 @@ button
 	position: relative
 	background-color: white
 	z-index: 2
-	&:after
-		position: absolute
-		display: block
-		content: ''
-		height: 360px
-		width: 360px
-		right: -220px
-		background-color: inherit
-		transform: rotate(25deg)
-		z-index: 1
+
 	&__self
 		z-index: 10
 
@@ -335,10 +332,20 @@ button
 
 .slide
 	height: 300px
+
+	&--full
+		height: 910px
 	&__bg
 		background-size: cover
 		background-position: center center
 		background-repeat: no-repeat
+
+		&--darken-opacity
+			opacity: .4
+
+		&--shapes
+			background-size: contain
+			background-position: center 100%
 
 	&__content
 	&__overlay
