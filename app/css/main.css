@@ -214,8 +214,10 @@ button {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
     z-index: 5; }
-  .header-page__item--logo {
-    max-width: 100px; }
+  .header-page__item {
+    line-height: 1.2; }
+    .header-page__item--logo {
+      max-width: 100px; }
   .header-page__emergency {
     -o-transition: 0.3s;
     -webkit-transition: 0.3s;
