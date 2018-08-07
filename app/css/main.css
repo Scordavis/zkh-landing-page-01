@@ -388,6 +388,7 @@ button {
   background-color: white;
   z-index: 2; }
   .logo-company__self {
+    max-height: 50px;
     z-index: 10; }
 
 .slider {
@@ -401,7 +402,7 @@ button {
   font-family: "OpenSans", sans-serif;
   font-weight: 600; }
   .slide--full {
-    height: 910px; }
+    height: auto; }
   .slide__bg {
     -webkit-background-size: cover;
             background-size: cover;
@@ -414,7 +415,7 @@ button {
               background-size: contain;
       background-position: center 100%; }
   .slide__content {
-    margin-top: 23vh; }
+    margin-top: 226px; }
   .slide__overlay {
     top: 0;
     right: 0;
