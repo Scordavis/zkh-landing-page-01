@@ -61,7 +61,9 @@ button
 		cursor: pointer
 
 .block-heading
-	// position: relative
+	font-size: 48px
+	font-family: $second-font
+	font-weight: normal
 	overflow: hidden
 	&--aside-lines
 		& span
@@ -75,7 +77,7 @@ button
 				top: -8px
 				left: -14px
 				width: 100%
-				height: 3px
+				height: 1px
 				background-color: #e8e8e8
 				margin-left: -100%
 			&:after
@@ -85,7 +87,7 @@ button
 				top: -8px
 				right: -14px
 				width: 100%
-				height: 3px
+				height: 1px
 				background-color: #e8e8e8
 				margin-right: -100%
 	&__light
@@ -157,25 +159,37 @@ button
 	min-height: 70px
 	color: white
 	font-size: 18px
+	font-family: $second-font
 	z-index: 8
-	&__wrapper
+
+	&__mask
+		height: 230px
+		background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+		z-index: 5
+
 	&__item
+		line-height: 1.2
 		&--logo
-			max-width: 60px
+			max-width: 100px
 
 	&__icon
 	&__emergency
 		@include transition(.3s)
 	&__text
-		font-size: 18px
+		font-size: 24px
 		text-transform: uppercase
+
 		&--bigger
 			font-weight: bold
+
 		&--logo-title
-			font-size: 24px
+			font-size: 36px
 			font-weight: bold
 			line-height: 1.2
+
 		&--logo-description
+			font-size: 19px
 			text-transform: lowercase
 			font-weight: normal
 
@@ -183,6 +197,24 @@ button
 .navbar
 	min-height: 80px
 	height: 80px
+	font-family: $second-font
+
+	&--wide
+		min-height: 60px
+		height: 60px
+		z-index: 6
+
+	&__decor
+		position: absolute
+		display: block
+		width: 72px
+		top: 0
+		z-index: 6
+		&:first-of-type
+			left: -70px
+		&:last-of-type
+			right: -70px
+
 	&__container
 		align-self: stretch
 
@@ -191,15 +223,18 @@ button
 		background-position: 0 center
 		background-repeat: repeat-x
 		opacity: .5
+
 		&--wrapper
 			top: 0
 
 	&__wrapper
 		text-transform: uppercase
 		font-weight: bold
+
 	&__item
 		list-style-position: inside
 		list-style-type: none
+
 		a
 			&:hover
 				text-decoration: none
@@ -209,18 +244,21 @@ button
 		background-color: white
 		list-style-position: inside
 		list-style-type: none
+
 		&--item
+	&__mobile
+		max-width: 480px
+		z-index: 5
 
 .nav-dropdown
 	position: relative
 	width: 100%
 
 	&__button
-		font-weight: bold
+		font-size: 19px
 		text-transform: uppercase
 		list-style-position: inside
 		list-style-type: none
-		text-shadow: white -1px -1px 9px, white 1px 1px 9px, white 1px 0 9px,	white 0 1px 9px, white -2px -2px 9px, white 2px 2px 9px, white 2px 0 9px, white 0 2px 9px
 		opacity: 1
 		@include transition(.2s)
 		&:hover
@@ -241,6 +279,7 @@ button
 		z-index: 6
 		&--mobile
 			position: relative
+			font-size: 18px
 
 		&--form
 			min-width: 300px
@@ -283,6 +322,14 @@ button
 	&:focus
 		opacity: .8
 
+	&--text
+		width: auto
+		height: auto
+		font-size: 30px
+		text-transform: uppercase
+		font-weight: bold
+		border: none
+
 	&__wrapper
 		border-width: 2px
 		border-style: solid
@@ -311,17 +358,9 @@ button
 	position: relative
 	background-color: white
 	z-index: 2
-	&:after
-		position: absolute
-		display: block
-		content: ''
-		height: 360px
-		width: 360px
-		right: -220px
-		background-color: inherit
-		transform: rotate(25deg)
-		z-index: 1
+
 	&__self
+		max-height: 50px
 		z-index: 10
 
 // .slider
@@ -335,12 +374,26 @@ button
 
 .slide
 	height: 300px
+	font-family: $second-font
+	font-weight: 600
+
+	&--full
+		height: auto
 	&__bg
 		background-size: cover
 		background-position: center center
 		background-repeat: no-repeat
 
+		&--darken-opacity
+			opacity: .4
+
+		&--shapes
+			background-size: contain
+			background-position: center 100%
+
 	&__content
+		margin-top: 226px
+
 	&__overlay
 		top: 0
 		right: 0
@@ -350,10 +403,17 @@ button
 
 	&__overlay-path
 	&__text
+		position: relative
+		z-index: 2
+		&--bg-shaped
+			top: 0
+			left: -120px
+			height: 100%
+			z-index: -1
+
 
 	&__text-heading
-		height: 100px
-		font-size: 16px
+		font-size: 30px
 		font-weight: bold
 
 		&--smaller
@@ -361,7 +421,7 @@ button
 			font-weight: normal
 
 	&__text-description
-		font-size: 18px
+		font-size: 30px
 		font-weight: normal
 		line-height: 1.3
 
@@ -369,9 +429,23 @@ button
 			font-size: 22px
 			font-weight: bold
 
+	&__button
+		top: 40px
+		max-width: 286px
+		background-color: #000000
+		color: #ffffff
+		font-weight: normal
+		border: 1px solid white
+		border-radius: 14px
+		@include transition(.2s)
+		&:hover
+			background-color: #333333
+			color: #ffffff
+
+
 .slick
 	&-arrow
-		top: 89%
+		top: 91.5%
 		z-index: 5
 
 	&-prev
@@ -436,7 +510,7 @@ button
 
 	.slick
 		&-arrow
-			top: 89%
+			top: 91.5%
 
 		&-prev
 			left: 60vw
@@ -459,7 +533,7 @@ button
 
 	.slick
 		&-arrow
-			top: 89%
+			top: 91.5%
 
 		&-prev
 			left: 59vw
@@ -474,7 +548,7 @@ button
 
 	.slick
 		&-arrow
-			top: 89%
+			top: 91.5%
 
 		&-prev
 			left: 60.5vw
@@ -489,7 +563,7 @@ button
 
 	.slick
 		&-arrow
-			top: 89%
+			top: 91.5%
 
 		&-prev
 			left: 59vw
@@ -508,7 +582,7 @@ button
 			left: 0
 
 		&-arrow
-			top: 89%
+			top: 91.5%
 
 		&-prev
 			left: 43vw
@@ -522,7 +596,7 @@ button
 			left: 0
 
 		&-arrow
-			top: 89%
+			top: 91.5%
 
 		&-prev
 			left: 41vw
@@ -536,7 +610,7 @@ button
 			left: 0
 
 		&-arrow
-			top: 89%
+			top: 91.5%
 
 		&-prev
 			left: 35vw
@@ -551,14 +625,16 @@ button
 		display: block
 		width: 270px
 		height: auto
-		&--shadowed
-			width: 263px
-			height: 470px
-			background-color: #ffffff
-			box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.08)
-			@include transition(.3s)
-			&:hover
-				box-shadow: 4px 11px 5px 0px rgba(0, 0, 0, 0.08)
+
+		&:hover
+			.news__img-decorate
+				top: -15%
+				height: 130%
+
+	&__card-wrapper
+		min-height: 232px
+		height: auto
+		border: 1px solid darken(white, 12%)
 
 	&__img
 		position: relative
@@ -567,15 +643,21 @@ button
 		bottom: 0
 		left: 0
 		display: block
-		height: 180px
+		height: 100%
 		background-image: url(../img/placeholder.png)
 		background-size: cover
 		background-position: center
 		box-shadow: 0 0px 0px lighten(black, 40%)
 		cursor: pointer
+
+	&__img-decorate
+		display: block
+		top: -25%
+		left: 10%
+		width: 80%
+		height: 150%
+		background-color: darken(white, 4%)
 		@include transition(.3s)
-		&:hover
-			box-shadow: 0 4px 20px lighten(black, 40%)
 
 		&--h-200
 			height: 200px
@@ -587,16 +669,16 @@ button
 			height: auto
 
 	&__title
-		font-size: 18px
+		font-size: 24px
 		line-height: 1.2
+		word-break: break-word
 		&--shadowed
 			font-size: 24px
 
 	&__description
-		&--shadowed
-			font-size: 16px
-			font-weight: light
-			line-height: 1.2
+		font-size: 16px
+		font-weight: light
+		line-height: 1.2
 
 	&__attribute
 		&--time
@@ -642,7 +724,7 @@ button
 		font-size: 48px
 
 	&__text
-		font-size: 13px
+		font-size: 16px
 		&:hover
 			text-decoration: none
 
@@ -650,13 +732,26 @@ button
 			height: 38px
 			min-height: 38px
 
+// map
+.map
+	&-wrapper
+		height: 450px
+
+	&-self
+		width: 100%
+		height: 100%
+
 // .footer-page
 .footer-page
 	&__item
+		word-break: break-word
+
 	&__icon
 		max-width: 33px
+
 	&__text
 		font-size: 18px
+
 	&__nav
 		list-style-type: none
 

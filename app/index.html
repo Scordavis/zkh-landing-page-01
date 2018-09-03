@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
-	<title>Приклад 2</title>
+	<title>Приклад 3</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -34,7 +34,14 @@
 			box-shadow: 0px 0px 0px 4px #daa520;
 		}
 
+		.block-heading--aside-lines span:before, .block-heading--aside-lines span:after{
+			background-color: #edb636;
+		}
+
 		/*.theme-colors*/
+
+		/*text color*/
+
 		.theme__text--accent {
 			color: #edb636;
 		}
@@ -47,11 +54,20 @@
 		.theme__text--dark {
 			color: #555555;
 		}
+		.theme__text--black {
+			color: #000000;
+		}
 		.theme__text--light {
 			color: #ffffff;
 		}
+
+		/*background-colors*/
+
 		.theme__bg--accent {
 			background-color: #edb636;
+		}
+		.theme__bg--transparent {
+			background-color: transparent;
 		}
 		.theme__bg--danger {
 			background-color: #f33924;
@@ -62,9 +78,15 @@
 		.theme__bg--dark {
 			background-color: #555555;
 		}
+		.theme__bg--black {
+			background-color: #000000;
+		}
 		.theme__bg--light {
 			background-color: #ffffff;
 		}
+
+		/*hamburger border-color*/
+
 		.theme__rad--accent {
 			border-color: #edb636;
 		}
@@ -83,162 +105,166 @@
 	</style>
 </head>
 <body>
-	<!-- header-page -->
-	<header class="container-fluid header-page theme__bg--dark" style="background-image: url(img/bg-abstract.png);">
-		<div class="row h-100 align-items-center px-3 py-2">
-			<!-- header-page__item location-->
-			<div class="col-lg col-md-4 col-sm-12 header-page__item text-center text-md-left">
-				<i class="mr-1 fa fa-map-marker header-page__icon theme__text--accent"></i>
-				<p class="d-inline header-page__text theme__text--light">Стебник.ua</p>
-			</div>
-			<!-- header-page__item phone -->
-			<div class="col-lg col-md-4 header-page__item text-center text-md-left">
-				<i class="mr-1 fa fa-phone header-page__icon theme__text--accent"></i>
-				<p class="d-inline header-page__text header-page__text--bigger theme__text--light">032-44-22-80</p>
-			</div>
-			<!-- header-page__item emergency -->
-			<div class="col-xl-4 col-lg-3 col-md-4 header-page__item text-center text-md-left">
-				<i class="mr-1 fa fa-exclamation-triangle header-page__icon theme__text--danger"></i>
-				<p class="d-inline mr-2 header-page__text header-page__text--bigger theme__text--light">032-44-31-08</p>
-				<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--danger">аварійна служба</a></p>
-			</div>
-			<!-- header-page__item godfather logo -->
-			<div class="d-none d-sm-block col-lg-3 col-md-12 text-right header-page__item text-center text-md-left">
-				<div class="row no-gutters align-items-center">
-					<div class="offset-0 offset-xl-1 col-5 col-sm-5 col-md-1 col-lg-3 col-xl-4 pr-2 text-right">
-						<img src="img/logo-transparent.svg" class="header-page__item--logo" alt="">
+	<!-- gradient-mask -->
+	<div class="position-absolute w-100 header-page__mask"></div>
+	<!-- .absolute-wrapper -->
+	<div class="container-fluid position-absolute">
+		<!-- header-page -->
+		<header class="container-fluid mb-4 header-page">
+			<div class="row h-100 no-gutters align-items-center px-3 py-2">
+				<!-- header-page__item company-logo-->
+				<div class="col-md-2 col-12 d-flex h-100 py-2 justify-content-center align-items-center logo-company theme__bg--transparent">
+					<img src="img/logo-company.png" class="img-fluid logo-company__self" alt="">
+				</div>
+				<!-- header-page__item location-->
+				<div class="col-md-3 col-12 header-page__item text-center">
+					<img src="img/icons/ico-map-marker.png" alt="" class="pl-2 mb-2 mr-1 footer-page__icon theme__text--accent">
+					<p class="d-inline header-page__text theme__text--light">м.Сватове.ua</p>
+				</div>
+				<div class="col-md-4 col-12">
+					<div class="row no-gutters align-items-center">
+						<!-- header-page__item phone -->
+						<div class="col-12 col-xl-7 header-page__item text-center">
+							<img src="img/icons/ico-mail.png" alt="" class="pl-2 mb-2 mr-1 footer-page__icon theme__text--accent">
+							<p class="d-inline header-page__text header-page__text--bigger theme__text--light">+38(000)0000000</p>
+						</div>
+						<!-- header-page__item emergency -->
+						<div class="col-12 col-xl-5 header-page__item text-center">
+							<p class="d-xl-inline d-lg-block mb-0  header-page__text header-page__text--bigger"><a href="#emergencyWindow" data-fancybox class="header-page__emergency reset-link theme__text--accent">аварійна служба</a></p>
+						</div>
 					</div>
-					<div class="col-7 col-sm-6 col-lg-7 col-xl-6 pl-md-0 pl-4">
-						<p class="mb-0 text-left header-page__text header-page__text--logo-title theme__text--light">фру - жкг<span class="mb-0 d-block header-page__text header-page__text--logo-description">інвестиції в працю</span></p>
+				</div>
+				<!-- header-page__item godfather logo -->
+				<div class="col-3 d-none d-md-block text-right header-page__item text-center">
+					<div class="row no-gutters align-items-center">
+						<div class="col-4 pr-2 text-right">
+							<img src="img/logo-transparent.svg" class="w-75 header-page__item--logo" alt="">
+						</div>
+						<div class="col-8 pl-md-0 pl-4">
+							<p class="mb-0 text-left header-page__text header-page__text--logo-title theme__text--light">фру - жкг<span class="mb-0 d-block header-page__text header-page__text--logo-description">інвестиції в працю</span></p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<!-- .navbar -->
-	<div class="row py-0 navbar">
-		<div class="position-absolute w-100 h-100">
-			<div class="offset-xl-4 offset-lg-3 h-100 navbar__background-image" style="background-image: url(img/bg/uzor1.png);"></div>
-		</div>
-		<div class="container-fluid navbar__container h-100">
-			<div class="d-flex col-9 col-sm-6 col-md-7 col-lg-3 h-100 py-2 align-items-center logo-company">
-				<img src="img/logo-company.png" class="img-fluid h-100 logo-company__self" alt="">
-			</div>
+		</header>
+		<!-- .navbar -->
+		<div class="container d-none d-md-block navbar navbar--wide theme__bg--accent">
+			<!-- .navbar__decor, prevent ie bug -->
+			<span class="h-100 d-none d-xl-block navbar__decor theme__bg--accent"></span>
 			<!-- site nav buttons desctop-->
-			<div class="col-lg-8 h-100 d-none d-lg-block col-7 col-xl-7 col-lg-6 col-md-4 nav__link-wrapper">
-				<div class="row no-gutters h-100 align-items-center">
-					<!-- nav__item dropdown list-->
-					<div class="col text-lg-center text-md-right nav__item">
-						<div class="nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">про нас</a>
-							<div class="nav-dropdown__content theme__bg--light">
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Керівництво</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Контакти</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Структура підприємства</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Телефонний довідник</a>
-							</div>
+			<div class="row no-gutters w-100 h-100 align-items-center">
+				<!-- nav__item dropdown list-->
+				<div class="col text-center nav__item">
+					<div class="nav-dropdown js-dropdown">
+						<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--black">про нас</a>
+						<div class="nav-dropdown__content theme__bg--accent">
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Керівництво</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Контакти</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Структура підприємства</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Телефонний довідник</a>
 						</div>
-					</div>
-					<!-- nav__item dropdown list-->
-					<div class="col text-lg-center text-md-right nav__item">
-						<div class="nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">тарифи</a>
-							<div class="nav-dropdown__content theme__bg--light">
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Нормативні акти</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Структура тарифу</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оголошення про перегляд</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Діючі тарифи</a>
-							</div>
-						</div>
-					</div>
-					<!-- nav__item dropdown list-->
-					<div class="col text-lg-center text-md-right nav__item">
-						<div class="reset-link nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">споживачам</a>
-							<div class="nav-dropdown__content theme__bg--light">
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оплата послуг</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Пільги</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Корисна інформація</a>
-							</div>
-						</div>
-					</div>
-					<!-- nav__item dropdown list-->
-					<div class="col text-lg-center text-md-right nav__item">
-						<div class="reset-link nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--dark">офіційне</a>
-							<div class="nav-dropdown__content theme__bg--light">
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Оголошення</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Державні закупівлі</a>
-								<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--dark">Звітність</a>
-							</div>
-						</div>
-					</div>
-					<!-- nav__item -->
-					<div class="col text-lg-center text-md-right nav__item">
-						<a href="#" class="d-md-block reset-link nav__link nav-dropdown__button theme__text--dark">Кабінет</a>
 					</div>
 				</div>
+				<!-- nav__item dropdown list-->
+				<div class="col text-center nav__item">
+					<div class="nav-dropdown js-dropdown">
+						<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--black">тарифи</a>
+						<div class="nav-dropdown__content theme__bg--accent">
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Нормативні акти</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Структура тарифу</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Оголошення про перегляд</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Діючі тарифи</a>
+						</div>
+					</div>
+				</div>
+				<!-- nav__item dropdown list-->
+				<div class="col text-center nav__item">
+					<div class="reset-link nav-dropdown js-dropdown">
+						<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--black">споживачам</a>
+						<div class="nav-dropdown__content theme__bg--accent">
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Оплата послуг</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Пільги</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Корисна інформація</a>
+						</div>
+					</div>
+				</div>
+				<!-- nav__item dropdown list-->
+				<div class="col text-center nav__item">
+					<div class="reset-link nav-dropdown js-dropdown">
+						<a href="#" class="reset-link nav__link nav-dropdown__button theme__text--black">офіційне</a>
+						<div class="nav-dropdown__content theme__bg--accent">
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Оголошення</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Державні закупівлі</a>
+							<a href="#" class="text-uppercase reset-link nav-dropdown__item theme__text--black">Звітність</a>
+						</div>
+					</div>
+				</div>
+				<!-- nav__item -->
+				<div class="col text-center nav__item">
+					<a href="#" class="d-md-block reset-link nav__link nav-dropdown__button theme__text--black">Кабінет</a>
+				</div>
 			</div>
+			<!-- .navbar__decor, prevent ie bug -->
+			<span class="h-100 d-none d-xl-block navbar__decor theme__bg--accent"></span>
+		</div>
+		<!-- .navbar__mobile -->
+		<div class="container-fluid position-relative d-block d-md-none px-0 navbar__mobile">
 			<!-- hamburger button -->
-			<div class="d-flex col-3 col-sm-4 col-md-4 d-lg-none h-100 align-items-center justify-content-end">
-				<button class="hamburger theme__rad--accent"  id="hamburger">
-					<span class="mx-auto my-1 hamburger__bar theme__bg--accent"></span>
-					<span class="mx-auto my-1 hamburger__bar theme__bg--accent"></span>
-					<span class="mx-auto my-1 hamburger__bar theme__bg--accent"></span>
-				</button>
+			<div class="d-md-none d-flex col-12 h-100 align-items-center justify-content-center theme__bg--accent">
+				<button class="hamburger hamburger--text" id="hamburger">Меню</button>
 			</div>
 			<!-- site nav buttons handler-->
-			<div class="col-12 nav__link-wrapper nav__link-wrapper--mobile js-navbar">
-				<div class="row no-gutters py-3 h-100 align-items-center theme__bg--dark">
+			<div class="col-12 px-0 nav__link-wrapper nav__link-wrapper--mobile js-navbar">
+				<div class="row no-gutters py-3 h-100 align-items-center theme__bg--black">
 					<!-- nav__item dropdown list-->
 					<div class="col-12 my-2 text-center nav__item nav__item--mobile">
 						<div class="nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--dark">про нас</a>
+							<a href="#" class="py-2 reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--light">про нас</a>
 							<div class="nav-dropdown__content nav-dropdown__content--mobile theme__bg--light">
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Керівництво</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Контакти</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Структура підприємства</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Телефонний довідник</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Керівництво</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Контакти</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Структура підприємства</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Телефонний довідник</a>
 							</div>
 						</div>
 					</div>
 					<!-- nav__item dropdown list-->
 					<div class="col-12 my-2 text-center nav__item nav__item--mobile">
 						<div class="nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--dark">тарифи</a>
+							<a href="#" class="py-2 reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--light">тарифи</a>
 							<div class="nav-dropdown__content nav-dropdown__content--mobile theme__bg--light">
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Нормативні акти</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Структура тарифу</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Оголошення про перегляд</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Діючі тарифи</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Нормативні акти</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Структура тарифу</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Оголошення про перегляд</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Діючі тарифи</a>
 							</div>
 						</div>
 					</div>
 					<!-- nav__item dropdown list-->
 					<div class="col-12 my-2 text-center nav__item nav__item--mobile">
 						<div class="reset-link nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--dark">споживачам</a>
+							<a href="#" class="py-2 reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--light">споживачам</a>
 							<div class="nav-dropdown__content nav-dropdown__content--mobile theme__bg--light">
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Оплата послуг</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Пільги</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Корисна інформація</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Оплата послуг</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Пільги</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Корисна інформація</a>
 							</div>
 						</div>
 					</div>
 					<!-- nav__item dropdown list-->
 					<div class="col-12 my-2 text-center nav__item nav__item--mobile">
 						<div class="reset-link nav-dropdown js-dropdown">
-							<a href="#" class="reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--dark">офіційне</a>
+							<a href="#" class="py-2 reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--light">офіційне</a>
 							<div class="nav-dropdown__content nav-dropdown__content--mobile theme__bg--light">
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Оголошення</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Державні закупівлі</a>
-								<a href="#" class="text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--dark">Звітність</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Оголошення</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Державні закупівлі</a>
+								<a href="#" class="py-2 text-center text-uppercase reset-link nav-dropdown__item nav-dropdown__item--mobile theme__text--black">Звітність</a>
 							</div>
 						</div>
 					</div>
 					<!-- nav__item -->
 					<div class="col-12 my-2 text-center nav__item nav__item--mobile">
-						<a href="#" class="d-md-block reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--dark">Кабінет</a>
+						<a href="#" class="d-md-block py-2 reset-link nav__link nav__link--mobile nav-dropdown__button theme__text--light">Кабінет</a>
 					</div>
 				</div>
 			</div>
@@ -248,75 +274,78 @@
 	<div class="w-100 slider">
 		<div class="h-100 mb-0 slider__wrapper" id="topSlider">
 			<!-- slide-->
-			<div class="position-relative slide">
-				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/snow.jpg);">
+			<div class="position-relative pb-5 slide slide--full">
+				<!-- image -->
+				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/slide-1.jpg);">
 				</div>
-				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
-					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
-								<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 </span>осіб</p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
+				<!-- darken-opacity -->
+				<div class="slide__bg slide__bg--darken-opacity h-100 w-100 position-absolute" style="background-color: #000000">
+				</div>
+				<!-- slider shapes -->
+				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/slider-shapes.png);">
+				</div>
+				<div class="mb-5 slide__content">
+					<div class="container h-100 pt-5">
+						<div class="row h-100 mb-5">
+							<div class="offset-lg-4 offset-md-2 col-lg-7 col-md-10 h-100 pl-2 pl-md-0 py-4 slide__text text-center" >
+								<img src="img/bg-shaped.png" alt="" class="d-none d-md-block w-100 position-absolute slide__text--bg-shaped">
+								<h2 class="mb-4 pt-3 text-uppercase text-left slide__text-heading theme__text--accent">Послуги:<span class="d-block slide__text-heading--smaller theme__text--light">водопостачання та водовідведення</span></h2>
+								<p class="mb-4 text-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger theme__text--accent">2017</span></p>
+								<p class="mb-4 text-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger theme__text--accent">0 осіб</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger theme__text--accent">1265</span></p>
+								<a href="#" class="d-inline-block position-relative w-100 reset-link px-5 py-4 text-uppercase slide__button">Дізнатись більше</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- slide-->
-			<div class="position-relative slide">
+			<div class="position-relative pb-5 slide slide--full">
+				<!-- image -->
 				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/water.jpg);">
 				</div>
-				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
-					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
-								<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 </span>осіб</p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
+				<!-- darken-opacity -->
+				<div class="slide__bg slide__bg--darken-opacity h-100 w-100 position-absolute" style="background-color: #000000">
+				</div>
+				<!-- slider shapes -->
+				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/slider-shapes.png);">
+				</div>
+				<div class="mb-5 slide__content">
+					<div class="container h-100 pt-5">
+						<div class="row h-100 mb-5">
+							<div class="offset-lg-4 offset-md-2 col-lg-7 col-md-10 h-100 pl-2 pl-md-0 py-4 slide__text text-center" >
+								<img src="img/bg-shaped.png" alt="" class="d-none d-md-block w-100 position-absolute slide__text--bg-shaped">
+								<h2 class="mb-4 pt-3 text-uppercase text-left slide__text-heading theme__text--accent">Послуги:<span class="d-block slide__text-heading--smaller theme__text--light">водопостачання та водовідведення</span></h2>
+								<p class="mb-4 text-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger theme__text--accent">2017</span></p>
+								<p class="mb-4 text-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger theme__text--accent">0 осіб</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger theme__text--accent">1265</span></p>
+								<a href="#" class="d-inline-block position-relative w-100 reset-link px-5 py-4 text-uppercase slide__button">Дізнатись більше</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- slide-->
-			<div class="position-relative slide">
+			<div class="position-relative pb-5 slide slide--full">
+				<!-- image -->
 				<div class="slide__bg h-100 w-100 position-absolute" style="background-image: url(img/snow.jpg);">
 				</div>
-				<div class="slide__content">
-					<!-- visible overlay  on desctop -->
-					<svg class="d-lg-block d-none position-absolute w-100 h-100 slide__overlay" viewbox="-150 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M500,0 1500,0 1500,405 300,405" style="fill: #666666"/>
-					</svg>
-					<!-- visible overlay  on handler -->
-					<svg class="d-lg-none d-block position-absolute w-100 h-100 slide__overlay" viewbox="0 0 1920 405" preserveaspectratio="xMaxYMax slice">
-						<path class="slide__overlay-path visible-lg visible-md-path" d="M0,0 1500,0 1500,405 0,405" style="fill: #666666"/>
-					</svg>
-					<div class="container-fluid h-100">
-						<div class="row h-100">
-							<div class="offset-lg-6 col-lg-6 h-100 pl-5 py-4 slide__text">
-								<h2 class="mb-2 pt-3 text-uppercase text-center text-lg-left slide__text-heading theme__text--light">Послуги:<span class="ml-2 slide__text-heading--smaller">виробництво та транспортування теплової енергії</span></h2>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger">2017</span></p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger">0 </span>осіб</p>
-								<p class="mb-0 text-center text-lg-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger">1265</span></p>
+				<!-- darken-opacity -->
+				<div class="slide__bg slide__bg--darken-opacity h-100 w-100 position-absolute" style="background-color: #000000">
+				</div>
+				<!-- slider shapes -->
+				<div class="slide__bg slide__bg--shapes h-100 w-100 position-absolute" style="background-image: url(img/slider-shapes.png);">
+				</div>
+				<div class="mb-5 slide__content">
+					<div class="container h-100 pt-5">
+						<div class="row h-100 mb-5">
+							<div class="offset-lg-4 offset-md-2 col-lg-7 col-md-10 h-100 pl-2 pl-md-0 py-4 slide__text text-center" >
+								<img src="img/bg-shaped.png" alt="" class="d-none d-md-block w-100 position-absolute slide__text--bg-shaped">
+								<h2 class="mb-4 pt-3 text-uppercase text-left slide__text-heading theme__text--accent">Послуги:<span class="d-block slide__text-heading--smaller theme__text--light">водопостачання та водовідведення</span></h2>
+								<p class="mb-4 text-left slide__text-description theme__text--light">Рік заснування підприємства:<span class="ml-2 text-normal slide__text-description--bigger theme__text--accent">2017</span></p>
+								<p class="mb-4 text-left slide__text-description theme__text--light">Кількість співробітників:<span class="ml-2 mr-1 slide__text-description--bigger theme__text--accent">0 осіб</span></p>
+								<p class="mb-0 text-left slide__text-description theme__text--light">Кількість абонентів:<span class="ml-2 mr-1 slide__text-description--bigger theme__text--accent">1265</span></p>
+								<a href="#" class="d-inline-block position-relative w-100 reset-link px-5 py-4 text-uppercase slide__button">Дізнатись більше</a>
 							</div>
 						</div>
 					</div>
@@ -325,157 +354,176 @@
 		</div>
 	</div>
 	<!-- news-block -->
-	<div class="container mb-5 pt-5 theme__bg--light">
-		<h2 class="mb-5 text-center text-uppercase font-weight-bold block-heading block-heading--aside-lines theme__text--dark"><span>Новини</span></h2>
-		<div class="row js-news">
+	<div class="container mb-0 pt-5 theme__bg--light">
+		<h2 class="d-block mb-5 text-left block-heading block-heading--aside-lines theme__text--dark"><span>Новини</span></h2>
+		<div class="row pt-4">
 			<!-- news__card -->
-			<div class="col-12 px-2 mb-4">
-				<a href="#" class="m-auto reset-link news__card news__card--shadowed">
-					<div class="d-block mb-4 news__img news__img--shadowed news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
-					<div class="row mt-1 mb-3 px-3 no-gutters">
-						<!-- news attributes -->
-						<div class="col news__attribute">
-							<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+			<div class="col-12 col-xl-6 px-2 mb-5">
+				<a href="#" class="w-100 mb-5 reset-link news__card">
+					<div class="row no-gutters p-3 news__card-wrapper">
+						<!-- news card image -->
+						<div class="col-12 mb-5 mb-md-0 col-md-4 col-xl-6">
+							<div class="position-absolute news__img-decorate"></div>
+							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
 						</div>
-						<div class="col news__attribute">
-							<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+						<!-- news card content -->
+						<div class="col-12 col-md-8 col-xl-6 mt-3 mt-md-0">
+							<div class="row mt-1 mb-3 px-3 no-gutters">
+								<!-- news attributes -->
+								<div class="col news__attribute">
+									<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+								</div>
+								<div class="col news__attribute">
+									<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+								</div>
+							</div>
+							<p class="mt-1 mb-1 px-3 news__title news__title theme__text--accent">Заголовок новини</p>
+							<p class="mb-0 px-3 news__description news__description">Значимість цих проблем настільки очевидна, що зміцнення та розвиток структури в значній мірі обумовлює створення нових пропозицій.</p>
 						</div>
 					</div>
-					<p class="mt-1 mb-1 px-3 news__title news__title--shadowed theme__text--accent">Заголовок новини</p>
-					<p class="mb-0 px-3 news__description news__description--shadowed">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
 				</a>
 			</div>
 			<!-- news__card -->
-			<div class="col-12 px-2 mb-4">
-				<a href="#" class="m-auto reset-link news__card news__card--shadowed">
-					<div class="d-block mb-4 news__img news__img--shadowed news__img--h-200 theme__bg--normal" style="background-image: url(img/maxresdefault.jpg);"></div>
-					<div class="row mt-1 mb-3 px-3 no-gutters">
-						<!-- news attributes -->
-						<div class="col news__attribute">
-							<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+			<div class="col-12 col-xl-6 px-2 mb-5">
+				<a href="#" class="w-100 mb-5 reset-link news__card">
+					<div class="row no-gutters p-3 news__card-wrapper">
+						<!-- news card image -->
+						<div class="col-12 mb-5 mb-md-0 col-md-4 col-xl-6">
+							<div class="position-absolute news__img-decorate"></div>
+							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
 						</div>
-						<div class="col news__attribute">
-							<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+						<!-- news card content -->
+						<div class="col-12 col-md-8 col-xl-6 mt-3 mt-md-0">
+							<div class="row mt-1 mb-3 px-3 no-gutters">
+								<!-- news attributes -->
+								<div class="col news__attribute">
+									<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+								</div>
+								<div class="col news__attribute">
+									<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+								</div>
+							</div>
+							<p class="mt-1 mb-1 px-3 news__title news__title theme__text--accent">Заголовок новини</p>
+							<p class="mb-0 px-3 news__description news__description">Значимість цих проблем настільки очевидна, що зміцнення та розвиток структури в значній мірі обумовлює створення нових пропозицій.</p>
 						</div>
 					</div>
-					<p class="mt-1 mb-1 px-3 news__title news__title--shadowed theme__text--accent">Заголовок новини</p>
-					<p class="mb-0 px-3 news__description news__description--shadowed">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
 				</a>
 			</div>
 			<!-- news__card -->
-			<div class="col-12 px-2 mb-4">
-				<a href="#" class="m-auto reset-link news__card news__card--shadowed">
-					<div class="d-block mb-4 news__img news__img--shadowed news__img--h-200 theme__bg--normal" style="background-image: url(img/water.jpg);"></div>
-					<div class="row mt-1 mb-3 px-3 no-gutters">
-						<!-- news attributes -->
-						<div class="col news__attribute">
-							<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+			<div class="col-12 col-xl-6 px-2 mb-5">
+				<a href="#" class="w-100 mb-5 reset-link news__card">
+					<div class="row no-gutters p-3 news__card-wrapper">
+						<!-- news card image -->
+						<div class="col-12 mb-5 mb-md-0 col-md-4 col-xl-6">
+							<div class="position-absolute news__img-decorate"></div>
+							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
 						</div>
-						<div class="col news__attribute">
-							<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+						<!-- news card content -->
+						<div class="col-12 col-md-8 col-xl-6 mt-3 mt-md-0">
+							<div class="row mt-1 mb-3 px-3 no-gutters">
+								<!-- news attributes -->
+								<div class="col news__attribute">
+									<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+								</div>
+								<div class="col news__attribute">
+									<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+								</div>
+							</div>
+							<p class="mt-1 mb-1 px-3 news__title news__title theme__text--accent">Заголовок новини</p>
+							<p class="mb-0 px-3 news__description news__description">Значимість цих проблем настільки очевидна, що зміцнення та розвиток структури в значній мірі обумовлює створення нових пропозицій.</p>
 						</div>
 					</div>
-					<p class="mt-1 mb-1 px-3 news__title news__title--shadowed theme__text--accent">Заголовок новини</p>
-					<p class="mb-0 px-3 news__description news__description--shadowed">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
 				</a>
 			</div>
 			<!-- news__card -->
-			<div class="col-12 px-2 mb-4">
-				<a href="#" class="m-auto reset-link news__card news__card--shadowed">
-					<div class="d-block mb-4 news__img news__img--shadowed news__img--h-200 theme__bg--normal" style="background-image: url(img/teplo2.jpg);"></div>
-					<div class="row mt-1 mb-3 px-3 no-gutters">
-						<!-- news attributes -->
-						<div class="col news__attribute">
-							<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+			<div class="col-12 col-xl-6 px-2 mb-5">
+				<a href="#" class="w-100 mb-5 reset-link news__card">
+					<div class="row no-gutters p-3 news__card-wrapper">
+						<!-- news card image -->
+						<div class="col-12 mb-5 mb-md-0 col-md-4 col-xl-6">
+							<div class="position-absolute news__img-decorate"></div>
+							<div class="d-block news__img news__img news__img--h-200 theme__bg--normal" style="background-image: url(img/snow.jpg);"></div>
 						</div>
-						<div class="col news__attribute">
-							<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
-						</div>
-					</div>
-					<p class="mt-1 mb-1 px-3 news__title news__title--shadowed theme__text--accent">Заголовок новини</p>
-					<p class="mb-0 px-3 news__description news__description--shadowed">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-				</a>
-			</div>
-			<!-- news__card -->
-			<div class="col-12 px-2 mb-4">
-				<a href="#" class="m-auto reset-link news__card news__card--shadowed">
-					<div class="d-block mb-4 news__img news__img--shadowed news__img--h-200 theme__bg--normal" style="background-image: url(img/placeholder.png);"></div>
-					<div class="row mt-1 mb-3 px-3 no-gutters">
-						<!-- news attributes -->
-						<div class="col news__attribute">
-							<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
-						</div>
-						<div class="col news__attribute">
-							<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+						<!-- news card content -->
+						<div class="col-12 col-md-8 col-xl-6 mt-3 mt-md-0">
+							<div class="row mt-1 mb-3 px-3 no-gutters">
+								<!-- news attributes -->
+								<div class="col news__attribute">
+									<img src="img/ico-news-publication.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--time" data-publication="12.07.2018"></small>
+								</div>
+								<div class="col news__attribute">
+									<img src="img/ico-news-popularity.png" alt="" class="d-inline mr-1 news__icon"><small class="news__attribute--views" data-popularity="8">переглядів</small>
+								</div>
+							</div>
+							<p class="mt-1 mb-1 px-3 news__title news__title theme__text--accent">Заголовок новини</p>
+							<p class="mb-0 px-3 news__description news__description">Значимість цих проблем настільки очевидна, що зміцнення та розвиток структури в значній мірі обумовлює створення нових пропозицій.</p>
 						</div>
 					</div>
-					<p class="mt-1 mb-1 px-3 news__title news__title--shadowed theme__text--accent">Заголовок новини</p>
-					<p class="mb-0 px-3 news__description news__description--shadowed">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
 				</a>
 			</div>
 		</div>
 	</div>
 	<div class="col-12 w-100 mb-5"></div> <!-- its like a hr, but invisible -->
 	<!-- important-sections -->
-	<div class="container-fluid py-5 important-sections__wrapper important-sections__wrapper--dark important-sections--dark">
+	<div class="container-fluid py-5 important-sections__wrapper important-sections__wrapper--dark important-sections--dark" style="background-image: url(img/bg-direction.jpg);">
 		<div class="container pt-3">
-			<h2 class="mb-5 text-center text-uppercase font-weight-bold block-heading block-heading--aside-lines block-heading__light--aside-lines theme__text--light"><span>Важливі розділи</span></h2>
+			<h2 class="d-block mb-5 text-left block-heading block-heading--aside-lines theme__text--light"><span>Важливі розділи</span></h2>
 			<div class="row mt-5 pb-5">
 				<!-- important-sections__card -->
-				<div class="col-lg-3 col-md-6 col-12 mt-2 mt-lg-0 mb-4 mb-lg-0">
-					<div class="m-auto w-100 important-sections__card important-sections__card--middle pt-4 pb-2 theme__bg--accent">
-						<a href="#" class="d-block w-100 important-sections">
-							<div class="row theme__text--dark">
+				<div class="col-12 col-sm-6 col-md-3 mt-2 mt-lg-0 mb-4 mb-lg-0">
+					<div class="m-auto w-100 important-sections__card important-sections__card--middle pt-4 pb-2">
+						<a href="#" class="d-block w-100 reset-link important-sections">
+							<div class="row theme__text--light">
 								<div class="col-12 mb-2 text-center important-sections__img-wrapper">
 									<img src="img/icons/ico-direction-1.png" class="mb-3 mt-2 img-fluid important-sections__img" alt="">
 								</div>
 								<div class="col-12 text-center">
-									<p class="mb-0 px-5 font-weight-bold text-uppercase important-sections__text important-sections__text--middle">Книга скарг та пропозицій</p>
+									<p class="mb-0 px-lg-3 px-0 text-uppercase important-sections__text important-sections__text--middle">Книга скарг та пропозицій</p>
 								</div>
 							</div>
 						</a>
 					</div>
 				</div>
 				<!-- important-sections__card -->
-				<div class="col-lg-3 col-md-6 col-12 mt-2 mt-lg-0 mb-4 mb-lg-0">
-					<div class="m-auto w-100 important-sections__card important-sections__card--middle pt-4 pb-2 theme__bg--accent">
-						<a href="#" class="d-block w-100 important-sections">
-							<div class="row theme__text--dark">
+				<div class="col-12 col-sm-6 col-md-3 mt-2 mt-lg-0 mb-4 mb-lg-0">
+					<div class="m-auto w-100 important-sections__card important-sections__card--middle pt-4 pb-2">
+						<a href="#" class="d-block w-100 reset-link important-sections">
+							<div class="row theme__text--light">
 								<div class="col-12 mb-2 text-center important-sections__img-wrapper">
 									<img src="img/icons/ico-direction-2.png" class="mb-3 mt-2 img-fluid important-sections__img" alt="">
 								</div>
 								<div class="col-12 text-center">
-									<p class="mb-0 px-5 font-weight-bold text-uppercase important-sections__text important-sections__text--middle">Органи місцевого самоврядування</p>
+									<p class="mb-0 px-lg-3 px-0 text-uppercase important-sections__text important-sections__text--middle">Органи місцевого самоврядування</p>
 								</div>
 							</div>
 						</a>
 					</div>
 				</div>
 				<!-- important-sections__card -->
-				<div class="col-lg-3 col-md-6 col-12 mt-2 mt-lg-0 mb-4 mb-lg-0">
-					<div class="m-auto w-100 important-sections__card important-sections__card--middle pt-4 pb-2 theme__bg--accent">
-						<a href="#" class="d-block w-100 important-sections">
-							<div class="row theme__text--dark">
+				<div class="col-12 col-sm-6 col-md-3 mt-2 mt-lg-0 mb-4 mb-lg-0">
+					<div class="m-auto w-100 important-sections__card important-sections__card--middle pt-4 pb-2">
+						<a href="#" class="d-block w-100 reset-link important-sections">
+							<div class="row theme__text--light">
 								<div class="col-12 mb-2 text-center important-sections__img-wrapper">
 									<img src="img/icons/ico-direction-3.png" class="mb-3 mt-2 img-fluid important-sections__img" alt="">
 								</div>
 								<div class="col-12 text-center">
-									<p class="mb-0 px-5 font-weight-bold text-uppercase important-sections__text important-sections__text--middle">Корисні посилання</p>
+									<p class="mb-0 px-lg-3 px-0 text-uppercase important-sections__text important-sections__text--middle">Корисні посилання</p>
 								</div>
 							</div>
 						</a>
 					</div>
 				</div>
 				<!-- important-sections__card -->
-				<div class="col-lg-3 col-md-6 col-12 mt-2 mt-lg-0 mb-4 mb-lg-0">
-					<div class="m-auto w-100 important-sections__card important-sections__card--middle pt-4 pb-2 theme__bg--accent">
-						<a href="#" class="d-block w-100 important-sections">
-							<div class="row theme__text--dark">
+				<div class="col-12 col-sm-6 col-md-3 mt-2 mt-lg-0 mb-4 mb-lg-0">
+					<div class="m-auto w-100 important-sections__card important-sections__card--middle pt-4 pb-2">
+						<a href="#" class="d-block w-100 reset-link important-sections">
+							<div class="row theme__text--light">
 								<div class="col-12 mb-2 text-center important-sections__img-wrapper">
 									<img src="img/icons/ico-direction-4.png" class="mb-3 mt-2 img-fluid important-sections__img" alt="">
 								</div>
 								<div class="col-12 text-center">
-									<p class="mb-0 px-5 font-weight-bold text-uppercase important-sections__text important-sections__text--middle">наші вакансії</p>
+									<p class="mb-0 px-lg-3 px-0 text-uppercase important-sections__text important-sections__text--middle">наші вакансії</p>
 								</div>
 							</div>
 						</a>
@@ -484,11 +532,15 @@
 			</div>
 		</div>
 	</div>
+	<div class="container-fluid p-0 map-wrapper">
+		<!-- attention about width and height of frame. There are setting at main.css -->
+		<iframe class="map-self" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162757.72582768791!2d30.392608906316386!3d50.40217023832634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1533561444382" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
 	<!-- .footer-page -->
-	<footer class="container-fluid py-5 border-top footer-page theme__bg--dark" style="background-image: url();">
+	<footer class="container-fluid py-5 footer-page theme__bg--dark" style="background-image: url();">
 		<div class="row px-5">
 			<!-- item -->
-			<div class="col-lg-4 col-md-6 order-lg-1 order-md-1 mb-md-3 footer-page__item text-center text-md-left theme__text--light">
+			<div class="col-lg-4 col-md-6 order-lg-1 order-md-2 mb-3 mb-md-0 footer-page__item text-center text-md-left theme__text--light">
 				<a href="#" class="d-block mb-2 text-uppercase reset-link footer-page__link">Державне комунальне підприємство "стебниктеплокомуненерго"</a>
 				<img src="img/icons/ico-map-marker.png" alt="" class="pl-2 mr-1 footer-page__icon theme__text--accent">
 				<p class="d-inline footer-page__text theme__text--light">82172, Львівська область, м. Стебник, вул. А.Мельника,17.</p>
@@ -496,24 +548,29 @@
 				<img src="img/icons/ico-mail.png" alt="" class="pl-2 mr-1 footer-page__icon theme__text--accent">
 				<a href="mailto:dkpstke@gmail.com" class="d-inline mr-1 reset-link footer-page__link theme__text--light">dkpstke@gmail.com</a>
 			</div>
-			<!-- item -->
-			<div class="col-lg-3 col-md-6 order-lg-2 order-md-2 footer-page__item text-center text-md-right text-lg-left theme__text--light">
-				<ul class="pl-0 pl-md-2 footer-page__nav">
-					<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Про придприемство</a></li>
-					<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Підрозділ</a></li>
-					<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Тарифи</a></li>
-				</ul>
+			<!-- footer navigation -->
+			<div class="col-lg-6 col-12 order-xl-2 order-lg-2 order-md-1 mb-4 mb-lg-0">
+				<div class="row">
+					<!-- item -->
+					<div class="col-lg-6 col-md-6 footer-page__item text-center text-center text-lg-left theme__text--light">
+						<ul class="row no-gutters flex-column flex-md-row flex-lg-column justify-content-between  pl-0 pl-md-2 footer-page__nav">
+							<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Про придприемство</a></li>
+							<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Підрозділ</a></li>
+							<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Тарифи</a></li>
+						</ul>
+					</div>
+					<!-- item -->
+					<div class="col-lg-6 col-md-6 footer-page__item text-center text-center text-lg-left theme__text--light">
+						<ul class="row no-gutters flex-column flex-md-row flex-lg-column justify-content-between  pl-0 pl-md-2 footer-page__nav">
+							<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Споживачам</a></li>
+							<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Офіційне</a></li>
+							<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Кабінет</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 			<!-- item -->
-			<div class="col-lg-3 col-md-6 order-lg-3 order-md-4 footer-page__item text-center text-md-right text-lg-left theme__text--light">
-				<ul class="pl-0 pl-md-2 footer-page__nav">
-					<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Споживачам</a></li>
-					<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Офіційне</a></li>
-					<li class="footer-page__li"><a href="#" class="text-uppercase font-weight-bold reset-link footer-page__link">Кабінет</a></li>
-				</ul>
-			</div>
-			<!-- item -->
-			<div class="col-lg-2 col-md-6 order-lg-4 order-md-3 text-center text-md-left text-lg-right footer-page__item theme__text--light">
+			<div class="col-lg-2 col-md-6 order-lg-4 order-md-3 text-center text-md-right footer-page__item theme__text--light">
 				<div class="d-block">
 					<img src="img/icons/ico-phone.png" alt="" class="mr-1 mb-2 footer-page__icon theme__text--accent">
 					<p class="d-inline header-page__text header-page__text--bigger footer-page__text footer-page__text--responsive theme__text--light">032-44-22-80</p>
@@ -728,7 +785,7 @@
 		$('#topSlider').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			autoplay: true,
+			autoplay: false,
 			autoplaySpeed: 10000,
 			dots: true,
 			arrows: true,
